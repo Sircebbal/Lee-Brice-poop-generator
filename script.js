@@ -38,7 +38,7 @@ button.onclick = function() {
 
     // Create one audio object per word
     let verbSound = new Audio("Verbs/" + phrase.verb + ".wav");
-    let mySound = new Audio("My.wav");
+    let mySound = new Audio("my.wav");
     let nounSound = new Audio("Nouns/" + phrase.noun + ".wav");
 
     // Chain them — each plays only after the previous one ends
