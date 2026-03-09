@@ -42,11 +42,14 @@ button.onclick = function() {
     let nounSound = new Audio("Nouns/" + phrase.noun + ".wav");
 
     // Chain them — each plays only after the previous one ends
-    verbSound.play();
-    verbSound.onended = function() {
+verbSound.play();
+verbSound.onended = function() {
+    setTimeout(function() {
         mySound.play();
         mySound.onended = function() {
-            nounSound.play();
+            setTimeout(function() {
+                nounSound.play();
+            }, 50);
         }
-    }
+    }, 50);
 }
